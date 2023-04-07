@@ -1,0 +1,92 @@
+:root {
+  /* Font-family */
+  --font-family-button: var(--font-family-slab);
+
+  /* Font size */
+  --font-size-button-default: var(--font-size-16);
+  --font-size-button-large: var(--font-size-20);
+  --font-size-button-small: var(--font-size-14);
+
+  /* Padding */
+  --padding-button-default: var(--spacer-8) var(--spacer-16);
+  --padding-button-large: var(--spacer-12) var(--spacer-20);
+  --padding-button-small: var(--spacer-4) var(--spacer-8);
+
+  --border-radius-button: var(--border-radius-4);
+
+  /* Full */
+  /* Primary */
+  --color-background-button-primary: var(--color-primary);
+  --color-background-button-primary-hover: var(--color-primary-dark);
+  --color-text-button-primary: var(--color-on-primary);
+  --color-text-button-primary-hover: var(--color-on-primary);
+
+  /* Ghosts */
+  --color-background-button-ghost: transparent;
+  --border-width-button-ghost: 1px;
+  /* Primary ghost */
+  --color-text-button-primary-ghost: var(--color-primary);
+  --color-text-button-primary-ghost-hover: var(--color-primary-dark);
+  --color-border-button-primary-ghost: var(--color-primary);
+  --color-border-button-primary-ghost-hover: var(--color-primary-dark);
+}
+
+[class*="button"] {
+  border: none;
+  background-color: initial;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-family-button);
+  font-size: var(--font-size-button);
+  border-radius: var(--border-radius-button);
+  display: inline-block;
+  padding: var(--padding-button-default);
+  transition: backgroud-color var(--transition-speed-default) color var(--transition-speed-default);
+}
+
+.button-small {
+  font-size: var(--font-size-button-small);
+  padding: var(--padding-button-small)
+}
+
+.button-large {
+  font-size: var(--font-size-button-large);
+  padding: var(--padding-button-large)
+}
+
+
+
+/* Buttons full */
+
+.button-primary {
+  background-color: var(--color-background-button-primary);
+  color: var(--color-text-button-primary);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--color-background-button-primary-hover);
+}
+
+
+
+/* Buttons ghosts */
+
+[class*="button-ghost"] {
+  border-width: var(--border-width-button-ghost);
+  border-style: solid;
+  transition: border var(--transition-speed-default) color var(--transition-speed-default);
+}
+
+.button-ghost-primary {
+  background-color: var(--color-background-button-ghost);
+  color: var(--color-text-button-primary-ghost);
+  border-color: var(--color-border-button-primary-ghost);
+}
+
+.button-ghost-primary:hover,
+.button-ghost-primary:focus {
+  border-color: var(--color-border-button-primary-ghost-hover);
+}
+
+
