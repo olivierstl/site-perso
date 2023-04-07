@@ -1,0 +1,17 @@
+.skiplinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skiplinks li {
+  margin: 0;
+}
+
+.skiplinks a:focus,
+.skiplinks a:active {
+  background-color: var(--white);
+  border-radius: var(--border-radius-default);
+  z-index: 1;
+  padding: 0 var(--spacer-8);
+}
