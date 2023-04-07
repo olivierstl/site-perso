@@ -1,0 +1,89 @@
+---
+import Skiplinks from './Skiplinks.astro'
+---
+
+<header
+  id="top"
+  class="header section layout-grid-wrapper-20"
+  role="banner"
+>
+  <Skiplinks />
+
+  <div class="top-bar">
+    <a
+      href="en"
+      class="button-small button-lang"
+      lang="EN"
+    >
+      English version
+    </a>
+    <button
+      id="button-theme"
+      class="button-ghost button-small"
+    >
+      Changer de thème
+    </button>
+  </div>
+
+  <div class="header-identity">
+    <img
+      class="header-avatar"
+      src="/images/avatar.png"
+      alt=""
+    />
+    <h1 class="header-title">
+      <small>Olivier STELL</small>
+      <abbr title="Curriculum Vitae">CV</abbr> 2022
+    </h1>
+  </div>
+
+  <nav
+    id="nav"
+    class="navigation"
+    role="navigation"
+    aria-label="navigation principale"
+  >
+    <ul class="list-unstyled navigation-list">
+      <li class="navigation-item">
+        <a
+          class="button-primary"
+          href="#presentation"
+        >
+          Présentation
+        </a>
+      </li>
+      <li class="navigation-item">
+        <a
+          class="button-primary"
+          href="#skills"
+        >
+          Compétences
+        </a>
+      </li>
+      <li class="navigation-item">
+        <a
+          class="button-primary"
+          href="#experience"
+        >
+          Expériences
+        </a>
+      </li>
+      <li class="navigation-item">
+        <a
+          class="button-primary"
+          href="#training"
+        >
+          Formations
+        </a>
+      </li>
+      <li class="navigation-item">
+        <a
+          class="button-primary"
+          href="#misc"
+        >
+          Divers
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
