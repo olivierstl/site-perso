@@ -1,0 +1,85 @@
+---
+import MainLayout from '@layouts/MainLayout.astro'
+
+const title = 'Uikit'
+
+const buttonSizes = [
+  {
+    name: 'small',
+    class: 'button-small'
+  },
+  {
+    name: 'default',
+    class: ''
+  },
+  {
+    name: 'large',
+    class: 'button-large'
+  }
+]
+
+const buttonVariants = [
+  {
+    name: 'primary',
+    class: 'button-primary'
+  },
+  {
+    name: 'ghost primary',
+    class: 'button-ghost-primary'
+  }
+]
+---
+
+<MainLayout
+  lang="fr"
+  title="uikit"
+>
+  <div class="uikit">
+    <h1>Titre de type h1</h1>
+    <h2>Titre de type h2</h2>
+    <h3>Titre de type h3</h3>
+    <h4>Titre de type h4</h4>
+    <h5>Titre de type h5</h5>
+    <h6>Titre de type h6</h6>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque optio accusantium
+      voluptate nisi <a
+        href="#"
+        class="link"
+        >corporis exercitationem</a
+      > tempora natus laborum reprehenderit animi cumque eaque provident officia, assumenda beatae nihil
+      quae placeat molestias.
+    </p>
+
+    <ul class="list">
+      <li>Element de liste</li>
+      <li>Element de liste</li>
+      <li>Element de liste</li>
+    </ul>
+
+    <!-- prettier-ignore -->
+    {
+      buttonVariants.map((variant) => (
+        <>
+          {buttonSizes.map((size) => (
+            <button
+              type="button"
+              class={`${variant.class} text-center ${size.class}`}
+            >
+              Bouton {variant.name} {size.name}
+            </button>
+          ))}
+        </>
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .uikit {
+    display: grid;
+    gap: var(--spacer-20);
+    justify-items: start;
+  }
+</style>
