@@ -1,0 +1,14 @@
+.button-scroll-top {
+  position: fixed;
+  bottom: var(--spacer-10);
+  right: var(--spacer-10);
+  padding: var(--spacer-8) var(--spacer-8) var(--spacer-4);
+  line-height: var(--line-height-small);
+}
+
+.button-scroll-top .icon {
+  fill: var(--color-text-button-primary);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
