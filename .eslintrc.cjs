@@ -10,6 +10,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:astro/recommended',
     '@vue/eslint-config-typescript',
+    'prettier',
     // Gère l'ordre de tous les plugins installés
     'alsacreations'
   ],
@@ -19,24 +20,26 @@ module.exports = {
   overrides: [
     {
       // Define the configuration for `.astro` file.
-      files: ["*.astro"],
+      files: ['*.astro'],
       // Allows Astro components to be parsed.
-      parser: "astro-eslint-parser",
+      parser: 'astro-eslint-parser',
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
       // It's the setting you need when using TypeScript.
       parserOptions: {
-        parser: "@typescript-eslint/parser",
-        extraFileExtensions: [".astro"],
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro']
       },
       rules: {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
-      },
-    },
+      }
+    }
     // ...
   ],
   rules: {
-    "@typescript-eslint/prefer-function-type": "off",
-    "vue/custom-event-name-casing": ["error", "kebab-case"]
-  }
+    '@typescript-eslint/prefer-function-type': 'off',
+    'vue/custom-event-name-casing': ['error', 'kebab-case'],
+    'prettier/prettier': 'error'
+  },
+  plugins: ['prettier']
 }
