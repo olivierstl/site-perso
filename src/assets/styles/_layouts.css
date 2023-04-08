@@ -15,6 +15,6 @@
 }
 
 /* <main> tag */
-.main-wrapper {
+.main {
   padding-block: var(--padding-block-main);
 }
