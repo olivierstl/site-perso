@@ -14,7 +14,20 @@
   grid-column: 2;
 }
 
-/* <main> tag */
+/* <body> element */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper > * {
+  flex-shrink: 0;
+}
+
+/* <main> element */
 .main {
   padding-block: var(--padding-block-main);
+  flex-grow: 1;
+  align-content: start;
 }

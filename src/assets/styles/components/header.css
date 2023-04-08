@@ -1,0 +1,64 @@
+
+:root {
+  --padding-block-header: var(--spacer-8) var(--spacer-30);
+  --color-background-header: linear-gradient(87.68deg, rgba(100, 218, 255, 0.1) -11.98%, rgba(112, 0, 255, 0.1) 109.71%);
+}
+
+.theme-dark {
+}
+
+.header {
+  background: var(--color-background-header);
+  position: relative;
+  padding-block: var(--padding-block-header);
+  display: grid;
+  row-gap: var(--spacer-4);
+}
+
+.header .skiplinks,
+.header .top-bar {
+  grid-row: 1;
+}
+
+
+.header-identity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer-20);
+}
+
+.header-avatar {
+  border-radius: var(--border-radius-max);
+  border: 5px solid var(--color-border-avatar);
+  max-width: 6.25rem;
+  flex: 0 0 auto;
+}
+
+.header-title {
+  margin-top: 0;
+}
+
+.header-title small {
+  display: block;
+  font-size: 0.7em;
+  opacity: .8;
+}
+
+.navigation {
+  margin-top: var(--spacer-12);
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-12);
+}
+
+.header .top-bar {
+  grid-column-end: 2;
+  justify-self: end;
+}
+
+.top-bar > *:not(:first-child) {
+  margin-left: var(--spacer-4);
+}

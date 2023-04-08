@@ -1,0 +1,9 @@
+:root {
+  --color-background-footer: var(--color-primary-light);
+}
+
+.footer {
+  grid-column: 1 / span 3;
+  background-color: var(--color-background-footer);
+  height: var(--spacer-4);
+}
