@@ -1,6 +1,6 @@
 
 :root {
-  --padding-block-header: var(--spacer-8) var(--spacer-30);
+  --padding-block-header: var(--spacer-8) var(--spacer-24);
   --color-background-header: linear-gradient(87.68deg, rgba(100, 218, 255, 0.1) -11.98%, rgba(112, 0, 255, 0.1) 109.71%);
 }
 
@@ -45,7 +45,7 @@
 }
 
 .navigation {
-  margin-top: var(--spacer-12);
+  margin-top: var(--spacer-16);
 }
 
 .navigation-list {

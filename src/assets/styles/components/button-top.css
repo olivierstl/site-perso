@@ -1,14 +1,21 @@
+:root {
+  --inset-button-scroll-top: var(--spacer-10);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --inset-button-scroll-top: var(--spacer-20);
+  }
+}
+
 .button-scroll-top {
   position: fixed;
-  bottom: var(--spacer-10);
-  right: var(--spacer-10);
-  padding: var(--spacer-8) var(--spacer-8) var(--spacer-4);
+  bottom: var(--inset-button-scroll-top);
+  right: var(--inset-button-scroll-top);
   line-height: var(--line-height-small);
 }
 
 .button-scroll-top .icon {
-  fill: var(--color-text-button-primary);
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  fill: currentColor;
+  transform: rotate(90deg);
 }

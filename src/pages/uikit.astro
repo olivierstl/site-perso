@@ -15,6 +15,10 @@ const buttonSizes = [
   {
     name: 'large',
     class: 'button-large'
+  },
+  {
+    name: 'round',
+    class: 'button-round'
   }
 ]
 
@@ -26,6 +30,10 @@ const buttonVariants = [
   {
     name: 'ghost primary',
     class: 'button-ghost-primary'
+  },
+  {
+    name: 'link primary',
+    class: 'button-link-primary'
   }
 ]
 ---
@@ -55,7 +63,13 @@ const buttonVariants = [
     <ul class="list">
       <li>Element de liste</li>
       <li>Element de liste</li>
-      <li>Element de liste</li>
+      <li>
+        <a
+          href="#"
+          class="link-out"
+          >Element de liste
+        </a>
+      </li>
     </ul>
 
     <!-- prettier-ignore -->
@@ -67,7 +81,7 @@ const buttonVariants = [
               type="button"
               class={`${variant.class} text-center ${size.class}`}
             >
-              Bouton {variant.name} {size.name}
+              Button {variant.name} {size.name}
             </button>
           ))}
         </>
@@ -79,7 +93,7 @@ const buttonVariants = [
 <style>
   .uikit {
     display: grid;
-    gap: var(--spacer-20);
+    gap: var(--spacer-32);
     justify-items: start;
   }
 </style>

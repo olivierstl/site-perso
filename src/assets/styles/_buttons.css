@@ -8,9 +8,14 @@
   --font-size-button-small: var(--font-size-14);
 
   /* Padding */
-  --padding-button-default: var(--spacer-8) var(--spacer-16);
-  --padding-button-large: var(--spacer-12) var(--spacer-20);
-  --padding-button-small: var(--spacer-4) var(--spacer-8);
+  --padding-inline-button-large: var(--spacer-20);
+  --padding-inline-button-default: var(--spacer-16);
+  --padding-inline-button-small: var(--spacer-8);
+
+  /* Sizes */
+  --height-button-large: var(--spacer-48);
+  --height-button-default: var(--spacer-40);
+  --height-button-small: var(--spacer-32);
 
   --border-radius-button: var(--border-radius-4);
 
@@ -23,12 +28,14 @@
 
   /* Ghosts */
   --color-background-button-ghost: transparent;
-  --border-width-button-ghost: 1px;
+  --color-border-button-ghost: currentColor;
+  --border-width-button-ghost-large: 2px;
+  --border-width-button-ghost-default: 1px;
+  --border-width-button-ghost-small: 1px;
+
   /* Primary ghost */
-  --color-text-button-primary-ghost: var(--color-primary);
-  --color-text-button-primary-ghost-hover: var(--color-primary-dark);
-  --color-border-button-primary-ghost: var(--color-primary);
-  --color-border-button-primary-ghost-hover: var(--color-primary-dark);
+  --color-text-button-ghost-primary: var(--color-primary);
+  --color-text-button-ghost-primary-hover: var(--color-primary-dark);
 }
 
 [class*="button"] {
@@ -39,24 +46,43 @@
   font-family: var(--font-family-button);
   font-size: var(--font-size-button);
   border-radius: var(--border-radius-button);
-  display: inline-block;
-  padding: var(--padding-button-default);
+  display: inline-grid;
+  place-content: center;
+  min-height: var(--height-button-default);
+  padding-inline: var(--padding-inline-button-default);
   transition: backgroud-color var(--transition-speed-default) color var(--transition-speed-default);
 }
 
 .button-small {
   font-size: var(--font-size-button-small);
-  padding: var(--padding-button-small)
+  padding-inline: var(--padding-inline-button-small);
+  min-height: var(--height-button-small);
 }
 
 .button-large {
   font-size: var(--font-size-button-large);
-  padding: var(--padding-button-large)
+  padding-inline: var(--padding-inline-button-large);
+  min-height: var(--height-button-large);
+}
+
+.button-round {
+  border-radius: var(--border-radius-max);
+}
+
+.button-square {
+  width: var(--height-button-default);
+  padding: 0;
+}
+.button-square.button-large {
+  width: var(--height-button-large);
+}
+.button-square.button-small {
+  width: var(--height-button-small);
 }
 
 
 
-/* Buttons full */
+/* Button full variants */
 
 .button-primary {
   background-color: var(--color-background-button-primary);
@@ -70,23 +96,50 @@
 
 
 
-/* Buttons ghosts */
+/* Button ghosts variants */
 
 [class*="button-ghost"] {
-  border-width: var(--border-width-button-ghost);
-  border-style: solid;
+  border: var(--border-width-button-ghost-default) solid var(--color-border-button-ghost);
   transition: border var(--transition-speed-default) color var(--transition-speed-default);
 }
 
+[class*="button-ghost"].button-small {
+  border-width: var(--border-width-button-ghost-small);
+}
+
+[class*="button-ghost"].button-large {
+  border-width: var(--border-width-button-ghost-large);
+}
+
+/* Buttons ghost variants */
+
 .button-ghost-primary {
   background-color: var(--color-background-button-ghost);
-  color: var(--color-text-button-primary-ghost);
-  border-color: var(--color-border-button-primary-ghost);
+  color: var(--color-text-button-ghost-primary);
 }
 
 .button-ghost-primary:hover,
 .button-ghost-primary:focus {
-  border-color: var(--color-border-button-primary-ghost-hover);
+  color: var(--color-text-button-ghost-primary-hover);
 }
 
 
+/* Button links variants */
+[class*="button-link"] {
+  text-decoration: var(--text-decoration-link);
+  padding: 0;
+}
+
+[class*="button-link"]:hover,
+[class*="button-link"]:focus {
+  text-decoration: var(--text-decoration-link-hover);
+}
+
+.button-link-primary {
+  color: var(--color-text-button-ghost-primary);
+}
+
+.button-link-primary:hover,
+.button-link-primary:focus {
+  color: var(--color-text-button-ghost-primary-hover);
+}

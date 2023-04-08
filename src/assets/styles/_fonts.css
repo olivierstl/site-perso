@@ -56,6 +56,9 @@
   --font-weight-h5: var(--font-weight-bold);
   --font-weight-h6: var(--font-weight-bold);
 
+  --text-decoration-link: underline;
+  --text-decoration-link-hover: none;
+
   /* Colors */
   --color-text-default: var(--deep-blue);
   --color-text-h1: var(--deep-blue);
@@ -132,7 +135,16 @@ h6,
   color: var(--color-text-h6);
 }
 
-[class*="link"] { color: var(--color-text-link); }
+[class*="link"] {
+  color: var(--color-text-link);
+  text-decoration: var(--text-decoration-link);
+}
+
+[class*="link"]:hover,
+[class*="link"]:focus {
+  text-decoration: var(--text-decoration-link-hover);
+}
+
 [class*="link"]:active { color: var(--color-text-link-active); }
 [class*="link"]:visited { color: var(--color-text-link-visited); }
 
