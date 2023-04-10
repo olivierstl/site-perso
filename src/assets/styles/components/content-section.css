@@ -1,0 +1,18 @@
+.section {
+  padding: var(--spacer-30) 0;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  margin-left: calc(-1 * var(--spacer-20));
+  display: block;
+  width: 2px;
+  background: currentColor;
+  top: 2px;
+  bottom: 2px;
+}

@@ -17,7 +17,7 @@
   --height-button-default: var(--spacer-40);
   --height-button-small: var(--spacer-32);
 
-  --border-radius-button: var(--border-radius-4);
+  --border-radius-button-default: var(--border-radius-4);
 
   /* Full */
   /* Primary */
@@ -25,6 +25,16 @@
   --color-background-button-primary-hover: var(--color-primary-dark);
   --color-text-button-primary: var(--color-on-primary);
   --color-text-button-primary-hover: var(--color-on-primary);
+  /* Secondary */
+  --color-background-button-secondary: var(--color-secondary);
+  --color-background-button-secondary-hover: var(--color-secondary-dark);
+  --color-text-button-secondary: var(--color-on-secondary);
+  --color-text-button-secondary-hover: var(--color-on-secondary);
+  /* Neutral */
+  --color-background-button-neutral: var(--color-neutral-light);
+  --color-background-button-neutral-hover: var(--color-neutral-dark);
+  --color-text-button-neutral: var(--color-on-neutral);
+  --color-text-button-neutral-hover: var(--color-on-neutral);
 
   /* Ghosts */
   --color-background-button-ghost: transparent;
@@ -36,21 +46,27 @@
   /* Primary ghost */
   --color-text-button-ghost-primary: var(--color-primary);
   --color-text-button-ghost-primary-hover: var(--color-primary-dark);
+  /* Secondary ghost */
+  --color-text-button-ghost-secondary: var(--color-secondary);
+  --color-text-button-ghost-secondary-hover: var(--color-secondary-dark);
+  /* Neutral ghost */
+  --color-text-button-ghost-neutral: var(--color-neutral-light);
+  --color-text-button-ghost-neutral-hover: var(--color-neutral-dark);
 }
 
-[class*="button"] {
+[class*="button-"] {
   border: none;
   background-color: initial;
   cursor: pointer;
   text-decoration: none;
   font-family: var(--font-family-button);
-  font-size: var(--font-size-button);
-  border-radius: var(--border-radius-button);
+  font-size: var(--font-size-button-default);
+  border-radius: var(--border-radius-button-default);
   display: inline-grid;
   place-content: center;
   min-height: var(--height-button-default);
   padding-inline: var(--padding-inline-button-default);
-  transition: backgroud-color var(--transition-speed-default) color var(--transition-speed-default);
+  transition: background-color var(--transition-speed-default), color var(--transition-speed-default);
 }
 
 .button-small {
@@ -94,6 +110,26 @@
   background-color: var(--color-background-button-primary-hover);
 }
 
+.button-secondary {
+  background-color: var(--color-background-button-secondary);
+  color: var(--color-text-button-secondary);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  background-color: var(--color-background-button-secondary-hover);
+}
+
+.button-neutral {
+  background-color: var(--color-background-button-neutral);
+  color: var(--color-text-button-neutral);
+}
+
+.button-neutral:hover,
+.button-neutral:focus {
+  background-color: var(--color-background-button-neutral-hover);
+}
+
 
 
 /* Button ghosts variants */
@@ -123,6 +159,26 @@
   color: var(--color-text-button-ghost-primary-hover);
 }
 
+.button-ghost-secondary {
+  background-color: var(--color-background-button-ghost);
+  color: var(--color-text-button-ghost-secondary);
+}
+
+.button-ghost-secondary:hover,
+.button-ghost-secondary:focus {
+  color: var(--color-text-button-ghost-secondary-hover);
+}
+
+.button-ghost-neutral {
+  background-color: var(--color-background-button-ghost);
+  color: var(--color-text-button-ghost-neutral);
+}
+
+.button-ghost-neutral:hover,
+.button-ghost-neutral:focus {
+  color: var(--color-text-button-ghost-neutral-hover);
+}
+
 
 /* Button links variants */
 [class*="button-link"] {
@@ -142,4 +198,22 @@
 .button-link-primary:hover,
 .button-link-primary:focus {
   color: var(--color-text-button-ghost-primary-hover);
+}
+
+.button-link-secondary {
+  color: var(--color-text-button-ghost-secondary);
+}
+
+.button-link-secondary:hover,
+.button-link-secondary:focus {
+  color: var(--color-text-button-ghost-secondary-hover);
+}
+
+.button-link-neutral {
+  color: var(--color-text-button-ghost-neutral);
+}
+
+.button-link-neutral:hover,
+.button-link-neutral:focus {
+  color: var(--color-text-button-ghost-neutral-hover);
 }

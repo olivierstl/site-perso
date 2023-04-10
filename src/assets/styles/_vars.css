@@ -52,9 +52,13 @@
   --purple: #6800ff;
   --purple-dark: #5200CC;
   --faded-purple: #343593;
+  --pond-bottom-white: #BEE6EF;
+  --pond-bottom-light: #31A9C4;
   --pond-bottom: #23788c;
-  --pond-bottom-light: #BEE6EF;
+  --pond-bottom-dark: #144652;
+  --deep-blue-light: #3E4E79;
   --deep-blue: #232c44;
+  --deep-blue-dark: #0E111B;
 
   /* Alpha black */
   --color-black-alpha-3: rgba(0, 0, 0, .3);
@@ -69,8 +73,8 @@
   --font-size-10: 0.625rem;
   --font-size-12: 0.75rem;
   --font-size-13: 0.8125rem;
-  --font-size-15: 0.875rem;
-  --font-size-14: 0.9375rem;
+  --font-size-14: 0.875rem;
+  --font-size-15: 0.9375rem;
   --font-size-16: 1rem;
   --font-size-18: 1.125rem;
   --font-size-20: 1.25rem;
@@ -121,6 +125,16 @@
   --color-primary: var(--purple);
   --color-primary-dark: var(--purple-dark);
   --color-on-primary: var(--white);
+
+  --color-secondary-light: var(--pond-bottom-light);
+  --color-secondary: var(--pond-bottom);
+  --color-secondary-dark: var(--pond-bottom-dark);
+  --color-on-secondary: var(--white);
+
+  --color-neutral-light: var(--deep-blue-light);
+  --color-neutral: var(--deep-blue);
+  --color-neutral-dark: var(--deep-blue-dark);
+  --color-on-neutral: var(--white);
 }
 
 

@@ -1,5 +1,5 @@
 :root {
-  --padding-block-main: var(--spacer-60);
+  --padding-block-main: var(--spacer-16) 0 var(--spacer-60);
 }
 
 .layout-grid-wrapper-20 {

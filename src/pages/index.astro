@@ -1,11 +1,72 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro'
+import ContentSection from '@components/ContentSection.astro'
+
+const datas = {
+  fr: {
+    sections: [
+      {
+        id: 'about',
+        title: 'Présentation',
+        content: `
+        <p>
+          Bonjour, je suis Olivier, je travaille dans le milieu du web depuis plus de 10 ans. Durant mon parcours, j'ai pu œuvrer dans les domaines du design et de la conception, dans l'intégration ou encore dans la mise en place de sites WordPress. Depuis 2017, je travaille à plein temps en tant que développeur <span lang="EN">front-end</span>.
+        </p>
+        <p>
+          Familier des standards <abbr lang="EN" title="HyperText Markup Language">HTML</abbr>, <abbr lang="EN" title="Cascading Style Sheets">CSS</abbr> et <abbr lang="EN" title="JavaScript">JS</abbr>, mais aussi de <abbr lang="EN" title="Syntactically Awesome Style Sheets">SASS</abbr> ou encore <span lang="EN">Vue.js</span> et <span lang="EN">TypeScript</span>, mon bagage en tant que designer me permet d'avoir une vision transverse et d'être un interlocuteur de choix au sein des projets web auxquels je participe.
+        </p>
+        <p>
+          Sensibilisé à l'accessibilité numérique lors de conférences, et ce, avant même de devenir développeur à temps plein. Je me spécialise officiellement en suivant la formation "Développer des sites web accessibles" dispensée par Access42 début 2021.
+        </p>
+        `
+      },
+      {
+        id: 'skills',
+        title: 'Compétences',
+        content: ''
+      },
+      {
+        id: 'experience',
+        title: 'Expériences',
+        content: ''
+      },
+      {
+        id: 'training',
+        title: 'Formations',
+        content: ''
+      },
+      {
+        id: 'misc',
+        title: 'Divers',
+        content: ''
+      }
+    ]
+  },
+  en: {
+    sections: {
+      id: 'about',
+      title: 'Présentation',
+      content: ''
+    }
+  }
+}
+
 const title = 'Mon site perso'
+const lang = 'fr'
 ---
 
 <MainLayout
-  lang={'fr'}
+  lang={lang}
   title={title}
 >
-  <h1>{title}</h1>
+  {
+    datas[lang].sections.map((section) => (
+      <ContentSection
+        id={section.id}
+        title={section.title}
+      >
+        <Fragment set:html={section.content} />
+      </ContentSection>
+    ))
+  }
 </MainLayout>

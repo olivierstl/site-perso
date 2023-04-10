@@ -28,12 +28,36 @@ const buttonVariants = [
     class: 'button-primary'
   },
   {
+    name: 'secondary',
+    class: 'button-secondary'
+  },
+  {
+    name: 'neutral',
+    class: 'button-neutral'
+  },
+  {
     name: 'ghost primary',
     class: 'button-ghost-primary'
   },
   {
+    name: 'ghost secondary',
+    class: 'button-ghost-secondary'
+  },
+  {
+    name: 'ghost neutral',
+    class: 'button-ghost-neutral'
+  },
+  {
     name: 'link primary',
     class: 'button-link-primary'
+  },
+  {
+    name: 'link secondary',
+    class: 'button-link-secondary'
+  },
+  {
+    name: 'link neutral',
+    class: 'button-link-neutral'
   }
 ]
 ---
@@ -74,9 +98,9 @@ const buttonVariants = [
 
     <!-- prettier-ignore -->
     {
-      buttonVariants.map((variant) => (
-        <>
-          {buttonSizes.map((size) => (
+      buttonSizes.map((size) => (
+        <div class="uikit-buttons">
+          {buttonVariants.map((variant) => (
             <button
               type="button"
               class={`${variant.class} text-center ${size.class}`}
@@ -84,7 +108,7 @@ const buttonVariants = [
               Button {variant.name} {size.name}
             </button>
           ))}
-        </>
+        </div>
       ))
     }
   </div>
@@ -93,7 +117,14 @@ const buttonVariants = [
 <style>
   .uikit {
     display: grid;
-    gap: var(--spacer-32);
+    gap: var(--spacer-40);
     justify-items: start;
+  }
+
+  .uikit-buttons {
+    display: flex;
+    gap: var(--spacer-20);
+    flex-wrap: wrap;
+    margin-block-start: var(--spacer-20);
   }
 </style>

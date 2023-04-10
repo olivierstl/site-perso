@@ -25,7 +25,7 @@
 
   --font-family-h1: var(--font-family-headings);
   --font-family-h2: var(--font-family-headings);
-  --font-family-h3: var(--font-family-headings);
+  --font-family-h3: var(--font-family-default);
   --font-family-h4: var(--font-family-default);
   --font-family-h5: var(--font-family-default);
   --font-family-h6: var(--font-family-default);
@@ -150,5 +150,5 @@ h6,
 
 abbr {
   cursor: help;
+  text-decoration: underline dotted;
 }
-

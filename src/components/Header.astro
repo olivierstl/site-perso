@@ -2,11 +2,13 @@
 import Skiplinks from './Skiplinks.astro'
 
 import '@styles/components/header.css'
+
+const currentYear = new Date().getFullYear()
 ---
 
 <header
   id="top"
-  class="header section layout-grid-wrapper-20"
+  class="header layout-grid-wrapper-20"
   role="banner"
 >
   <Skiplinks />
@@ -14,14 +16,14 @@ import '@styles/components/header.css'
   <div class="top-bar">
     <a
       href="en"
-      class="button-small button-lang"
+      class="button-small button-link-neutral"
       lang="EN"
     >
       English version
     </a>
     <button
       id="button-theme"
-      class="button-ghost button-small"
+      class="button-ghost-neutral button-small"
     >
       Changer de thème
     </button>
@@ -35,7 +37,8 @@ import '@styles/components/header.css'
     />
     <h1 class="header-title">
       <small>Olivier STELL</small>
-      <abbr title="Curriculum Vitae">CV</abbr> 2022
+      <abbr title="Curriculum Vitae">CV</abbr>
+      {currentYear}
     </h1>
   </div>
 
